@@ -11,7 +11,6 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #e0fbfc;
-    width: 1024px;
 }
 
 .index {
@@ -569,4 +568,110 @@ footer {
 .tam p {
     margin-bottom: 10px;
     margin-top: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    h2 {
+        font-size: 60px;
+        padding-left: 60px;
+    }
+    h4 {
+        font-size: 17px;
+    }
+
+    footer {
+        width: 768px;
+    }
+
+    .textNos {
+        grid-area: textNos;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .infoNos {
+        grid-area: infoNos;
+        font-size: 14px;
+        background-color: #e0fbfc;
+        width: 600px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .imgNos {
+        padding-top: 20px;
+        padding-left: 150px;
+        width: 700px;
+    }
+
+    .noso {
+        width: 400px;
+    }
+
+    .fondotexto {
+        background-color: #e0fbfc;
+        width: 650px;
+        margin: 50PX 20PX;
+        text-align: start;
+        font-size: 20px;
+    }
+
+    .sangria {
+        padding-bottom: 20px;
+        padding-top: 10px;
+        font-size: 16px;
+        background-color: #e0fbfc;
+        width: 500px;
+    }
+
+    .menu {
+        padding: 30px 0px;
+    }
+
+    .menu li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    /* CONTACTOS RESPONSIVE */
+    .contact {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.25fr;
+        grid-template-areas:
+            "tituContact "
+            "formuContact "
+            "texContact"
+            "footerContact";
+    }
+    
+    .formuContact {
+        grid-area: formuContact;
+        width: 768px;
+        height: 450px;
+        margin-top: 100px;
+        margin-bottom: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+       
+    }
+    
+    .texContact {
+        grid-area: texContact;
+        font-size: 14px;
+        width: 500px;
+        padding-left: 30px;
+        margin-bottom: 50px;
+    }
+    
+
 }
