@@ -574,15 +574,15 @@ footer {
 @media screen and (max-width: 768px) {
 
     h2 {
-        font-size: 60px;
-        padding-left: 60px;
+        font-size: 30px;
+        padding-left: 20px;
     }
     h4 {
-        font-size: 17px;
+        font-size: 12px;
     }
 
     footer {
-        width: 768px;
+        width: 425px;
     }
 
     .textNos {
@@ -590,7 +590,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items: start;
     }
 
     .infoNos {
@@ -598,40 +598,40 @@ footer {
         font-size: 14px;
         background-color: #e0fbfc;
         width: 600px;
-        padding: 30px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
-
-    .imgNos {
-        padding-top: 20px;
-        padding-left: 150px;
-        width: 700px;
+    .footerNos{
+        grid-area:footerNos ;
+        flex-direction: column;
+        justify-content: space-around;
     }
-
     .noso {
-        width: 400px;
+        width: 250px;
+        padding-top: 0px;
+        padding-left: 20px;
     }
 
     .fondotexto {
         background-color: #e0fbfc;
-        width: 650px;
-        margin: 50PX 20PX;
+        width: 300px;
+        margin: 50PX 10PX;
         text-align: start;
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .sangria {
         padding-bottom: 20px;
         padding-top: 10px;
-        font-size: 16px;
+        font-size: 12px;
         background-color: #e0fbfc;
-        width: 500px;
+        width: 350px;
     }
 
     .menu {
-        padding: 30px 0px;
+        padding: 15px 0px;
     }
 
     .menu li {
@@ -640,6 +640,18 @@ footer {
         justify-content: space-between;
         margin-left: 10px;
         margin-top: 10px;
+    }
+    a{
+        font-size: 12px;
+    }
+    .iconos {
+        width: 12px;
+        height: 12px;
+    }
+    
+    
+    .meto {
+        width: 70px;
     }
     /* CONTACTOS RESPONSIVE */
     .contact {
@@ -654,7 +666,7 @@ footer {
     
     .formuContact {
         grid-area: formuContact;
-        width: 768px;
+        width: 425px;
         height: 450px;
         margin-top: 100px;
         margin-bottom: 200px;
@@ -667,11 +679,15 @@ footer {
     
     .texContact {
         grid-area: texContact;
-        font-size: 14px;
-        width: 500px;
+        font-size: 12px;
+        width: 400px;
         padding-left: 30px;
         margin-bottom: 50px;
     }
     
-
+    .footerContact{
+        grid-area:footerNos ;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }
