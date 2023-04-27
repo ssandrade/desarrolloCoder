@@ -316,6 +316,11 @@ footer {
     justify-content: space-around;
 }
 
+.sopypago {
+    display: flex;
+    flex-direction: row;
+}
+
 .imgNos {
     grid-area: imgNos;
     padding-top: 50px;
@@ -417,11 +422,10 @@ footer {
 
 .contact {
     grid-template-columns: 500px;
-    grid-template-rows: 1fr 1fr 1fr 0.25fr;
+    grid-template-rows: 1fr 1fr 0.25fr;
     grid-template-areas:
         "tituContact "
         "formuContact "
-        "texContact"
         "footerContact";
 }
 
@@ -440,14 +444,7 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 60px;
-}
-
-.texContact {
-    grid-area: texContact;
-    font-size: 14px;
-    width: 300px;
-    padding-left: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .footerContact {
@@ -570,6 +567,9 @@ footer {
     margin-top: 5px;
 }
 
+.soporte {
+    padding-right: 100px;
+}
 
 @media screen and (max-width: 768px) {
 
@@ -577,6 +577,7 @@ footer {
         font-size: 30px;
         padding-left: 20px;
     }
+
     h4 {
         font-size: 12px;
     }
@@ -585,12 +586,29 @@ footer {
         width: 425px;
     }
 
+    .nosotros {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "menuNos"
+            "textNos"
+            "infoNos"
+            "footerNos";
+    }
+
+    .menuNos {
+        grid-area: menuNos;
+        padding: 30px 15px;
+        display: flex;
+        justify-content: flex-start;
+
+    }
+
     .textNos {
         grid-area: textNos;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: start;
     }
 
     .infoNos {
@@ -598,28 +616,40 @@ footer {
         font-size: 14px;
         background-color: #e0fbfc;
         width: 600px;
-        padding: 20px;
+        padding-left: 20px;
+        margin-top: -40px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
-    .footerNos{
-        grid-area:footerNos ;
-        flex-direction: column;
-        justify-content: space-around;
+
+    .meto {
+        width: 70px;
     }
+
     .noso {
-        width: 250px;
-        padding-top: 0px;
-        padding-left: 20px;
+        width: 200px;
+        margin-top: -180px;
+        margin-left: 140px;
+    }
+
+    .footerNos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sopypago {
+        display: flex;
+        flex-direction: column;
     }
 
     .fondotexto {
         background-color: #e0fbfc;
-        width: 300px;
-        margin: 50PX 10PX;
+        width: 350px;
         text-align: start;
-        font-size: 15px;
+        font-size: 13px;
+        padding-left: 40px;
     }
 
     .sangria {
@@ -641,53 +671,84 @@ footer {
         margin-left: 10px;
         margin-top: 10px;
     }
-    a{
+
+    a {
         font-size: 12px;
     }
+
     .iconos {
         width: 12px;
         height: 12px;
     }
-    
-    
-    .meto {
-        width: 70px;
-    }
+
+
     /* CONTACTOS RESPONSIVE */
     .contact {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 0.25fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
             "tituContact "
             "formuContact "
-            "texContact"
             "footerContact";
     }
-    
+
     .formuContact {
         grid-area: formuContact;
         width: 425px;
         height: 450px;
         margin-top: 100px;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-       
+
     }
-    
-    .texContact {
-        grid-area: texContact;
+
+    .footerContact {
+        grid-area: footerNos;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .imagen {
+        width: 250px;
+        height: 200px;
+        margin-top: -200px;
+        margin-left: 100px;
+    }
+
+    /* RESPONSIVE AYUDA */
+
+    .encabezadoA {
+        background-color: #e0fbfc;
         font-size: 12px;
-        width: 400px;
-        padding-left: 30px;
-        margin-bottom: 50px;
+        text-align: center;
     }
-    
-    .footerContact{
-        grid-area:footerNos ;
-        flex-direction: column;
-        justify-content: space-around;
+    .metoA {
+        display: none;
+    }
+    .mainAyuda2{
+        grid-area: mainAyuda2;
+        padding-left: 5px;
+    }
+    .mainAyuda p {
+        font-size: 11px;
+        width: 300px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+    .mainAyuda2 p{
+        font-size: 11px;
+        width: 300px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+    .footerAyuda {
+        grid-area: footerAyuda;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
     }
 }
