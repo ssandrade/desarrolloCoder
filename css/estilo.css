@@ -76,7 +76,7 @@ body {
     width: 1024px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .produIndex {
@@ -90,6 +90,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.sopypago {
+    display: flex;
+    justify-content: space-around;
+    background-color: #c2dfe3;
+    width: 500px;
 }
 
 h1 {
@@ -125,16 +132,12 @@ h4 {
     background-color: #e0fbfc;
     width: 1024px;
     padding-top: 40px;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    height: 470px;
 }
 
 .texpro {
-    background-color: #e0fbfc;
-    width: 1024px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     font-size: 13px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -168,11 +171,20 @@ h4 {
 }
 
 .sec {
+    flex: 1 0 auto;
+    margin: 0 50px;
+    width: 500px;
+    height: 500px;
     font-size: 16px;
     font-style: oblique;
     font-weight: bolder;
     color: #98faf2;
-    padding-top: 30px 30px;
+}
+.secProd {
+    flex: 1 0 auto;
+    margin: 0 50px;
+    width: 500px;
+    height: 400px;
 }
 
 .rem {
@@ -231,8 +243,8 @@ h4 {
 
 .imgcat {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    overflow: scroll;
 }
 
 .menu li {
@@ -349,11 +361,13 @@ footer {
 /* COMPRAS */
 .compras {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr0.25fr;
+    grid-template-rows: 1fr 1fr 0.25fr;
     grid-template-areas:
         "menuCompras"
         "contSec"
         "footerCompras";
+    background-color: #e0fbfc;
+    width: 1024px;
 }
 
 .menuCompras {
@@ -386,6 +400,10 @@ footer {
     width: 350px;
 }
 
+.sec1 p {
+    color: black;
+}
+
 .imgmain {
     width: 200px;
     height: 300px;
@@ -398,20 +416,6 @@ footer {
 }
 
 .sec1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 30px 120px;
-}
-
-.sec2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 30px 120px;
-}
-
-.sec3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -463,6 +467,8 @@ footer {
         "mainAyuda"
         "mainAyuda2"
         "footerAyuda";
+    background-color: #e0fbfc;
+    width: 1024px;
 }
 
 .navAyuda {
@@ -529,6 +535,8 @@ footer {
         "tamPol"
         "aceptacion"
         "footerPol";
+    background-color: #e0fbfc;
+    width: 1024px;
 }
 
 .navPol {
@@ -573,9 +581,19 @@ footer {
 
 @media screen and (max-width: 768px) {
 
-    h2 {
+    h1 {
         font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
         padding-left: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-left: 40PX;
+        margin-top: 20px;
     }
 
     h4 {
@@ -585,6 +603,155 @@ footer {
     footer {
         width: 425px;
     }
+
+    /* RESPONSIVE INDEX */
+
+    .index {
+        grid-template-rows: 0.03fr 0.02fr 0.06fr 0.05fr 0.06fr 1fr 0.25fr;
+        background-color: #e0fbfc;
+        width: 425px;
+        justify-content: flex-start;
+    }
+
+    .navIndex ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .encabezado {
+        width: 425px;
+    }
+
+    .encaIndex p {
+        font-size: 15px;
+    }
+
+    .produIndex {
+        background-color: #e0fbfc;
+        width: 425px;
+    }
+
+    .navIndex {
+        grid-area: navIndex;
+        padding: 0px 15px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .footerIndex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+  
+    .sopypago{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: #c2dfe3;
+        width: 200px;
+    }
+    .tituloIndex {
+        grid-area: tituloIndex;
+        width: 425px;
+    }
+
+    .imgtitu {
+        grid-area: imgtitu;
+        display: flex;
+        background-color: #e0fbfc;
+        width: 425px;
+        justify-content: center;
+    }
+
+    .imgprod {
+        background-color: #e0fbfc;
+        width: 425px;
+        height: 370px;
+    }
+    
+    .caso1{
+        height: 200px;
+    }
+    .secProd{
+        height: 300px;
+    }
+    .imagenchica {
+        width: 200px;
+    }
+
+    .i3 {
+        width: 350px;
+        height: 200px;
+        padding-right: 10px;
+    }
+
+    .i1 {
+        width: 300px;
+        height: 250px;
+    }
+
+    .cateIndex {
+        width: 425px;
+    }
+
+    
+    /* MIS COMPRAS */
+
+    .menuCompras ul {
+        padding-top: 50px;
+    }
+
+    .compras {
+        width: 425px;
+    }
+
+    .contSec main p {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .footerCompras {
+        margin-top: 20px;
+        justify-content: space-evenly;
+    }
+
+    .imgmain1 {
+        width: 200px;
+    }
+
+    .imgmain {
+        width: 130px;
+        height: 200px;
+    }
+
+    .contSec main h3 {
+        color: rgb(0, 255, 64);
+        margin-bottom: 30px;
+        margin-left: 0px;
+    }
+
+    .sec1 {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        padding-left: 40px;
+    }
+
+    .sec1 p {
+        padding-left: 20px;
+        color: black;
+    }
+
+    .sec1 h3 {
+        padding-left: 10px;
+    }
+
+    .imgmain {
+        padding-left: 10px;
+    }
+
+    /* RESPONSIVE NOSOTROS */
 
     .nosotros {
         grid-template-columns: 1fr;
@@ -637,11 +804,6 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    .sopypago {
-        display: flex;
-        flex-direction: column;
     }
 
     .fondotexto {
@@ -722,33 +884,96 @@ footer {
     /* RESPONSIVE AYUDA */
 
     .encabezadoA {
-        background-color: #e0fbfc;
+        background-color: #9db4c0;
+        width: 425px;
         font-size: 12px;
-        text-align: center;
+        padding-left: 100px;
+        text-align: start;
+        margin-left: -10px;
     }
+
+    .navAyuda ul {
+        padding-top: 50px;
+
+    }
+
     .metoA {
         display: none;
     }
-    .mainAyuda2{
+
+    .mainAyuda2 {
         grid-area: mainAyuda2;
         padding-left: 5px;
     }
+
+    .mainAyuda {
+        grid-area: mainAyuda;
+    }
+
     .mainAyuda p {
         font-size: 11px;
         width: 300px;
         padding-left: 20px;
         padding-bottom: 10px;
     }
-    .mainAyuda2 p{
+
+    .mainAyuda2 p {
         font-size: 11px;
         width: 300px;
         padding-left: 20px;
         padding-bottom: 10px;
     }
+
     .footerAyuda {
         grid-area: footerAyuda;
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
+    }
+
+    /* RESPONSIVE POLITICA */
+    .politica {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.25fr;
+        grid-template-areas:
+            "navPol"
+            "tamPol"
+            "aceptacion"
+            "footerPol";
+        background-color: #e0fbfc;
+        width: 425px;
+    }
+
+    .navPol {
+        grid-area: navPol;
+        padding: 30px 15px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .navPol ul {
+        padding-top: 50px;
+    }
+
+    .navPol h2 {
+        font-size: 25px;
+        padding-left: 0px;
+    }
+
+    .footerPol {
+        grid-area: footerPol;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .tam {
+        font-size: 11px;
+        margin: 20PX;
+        text-align: start;
+    }
+
+    .tam p {
+        padding-left: 10px;
     }
 }
